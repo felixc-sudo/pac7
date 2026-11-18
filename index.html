@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARBONCUT | Responsive Carbon Reduction Gallery & Tracking</title>
+  <link rel="stylesheet" href="carboncut_cssgrid_gallery.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="cc-topbar">
+    <div class="cc-wrap cc-topbar-inner">
+      <a href="#hero" class="cc-brand">
+        <span class="cc-dot"></span> CARBONCUT
+      </a>
+      <nav class="cc-nav" aria-label="Main Navigation">
+        <a href="#gallery-showcase">Reduction Gallery</a>
+        <a href="#footprint-estimator">Carbon Estimator</a>
+        <a href="#crud-checklist">Action Checklist</a>
+        <a href="#grid-theory">CSS Grid Theory</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="cc-hero">
+    <div class="cc-wrap cc-hero-inner">
+      <span class="cc-pill">Carbon Footprint Tracking &amp; Reduction Services</span>
+      <h1>Visualizing Verified Decarbonization Across Every Ecosystem</h1>
+      <p>
+        Explore CARBONCUT’s 8-project global offset and clean-energy portfolio built on a
+        <strong>CSS Grid Responsive Image Gallery</strong> that automatically reflows from a
+        4-column desktop matrix to a 2-column mobile grid.
+      </p>
+      <div class="cc-hero-actions">
+        <a href="#gallery-showcase" class="cc-btn cc-btn-primary">Explore 8-Tile Gallery</a>
+        <a href="#crud-checklist" class="cc-btn cc-btn-ghost">Open Action Checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practicum Core: Responsive 4x2 -> 2x4 CSS Grid Image Gallery -->
+  <section id="gallery-showcase" class="cc-section">
+    <div class="cc-wrap">
+      <div class="cc-head-row">
+        <div>
+          <h2>RESPONSIVE IMAGE GALLERY &mdash; CARBON REDUCTION PROJECTS</h2>
+          <p>Switch viewport preview or resize your browser window to watch CSS Grid rearrange the 8 tiles.</p>
+        </div>
+        <div class="cc-view-switcher" role="group" aria-label="Grid Column Preview">
+          <button type="button" class="cc-chip active" onclick="setGridMode('auto', this)">Auto Responsive</button>
+          <button type="button" class="cc-chip" onclick="setGridMode('desktop', this)">Desktop (4 Cols)</button>
+          <button type="button" class="cc-chip" onclick="setGridMode('mobile', this)">Mobile (2 Cols)</button>
+        </div>
+      </div>
+
+      <!-- 8-Card Responsive Grid (Matches the 4x2 Desktop / 2x4 Mobile Practicum Diagram) -->
+      <div id="carbonGalleryGrid" class="cc-responsive-gallery">
+        <figure class="cc-tile" onclick="inspectProject(0)">
+          <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80"
+            alt="Coastal Blue Carbon Mangroves"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%230f3d3e%22/><text x=%2250%%22 y=%2250%%22 fill=%22%2399f6e4%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Coastal Blue Carbon</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-4,200 t CO₂e/yr</span>
+            <h3>Coastal Blue Carbon</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(1)">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+            alt="Boreal Reforestation Corridor"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%2314532d%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23bbf7d0%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Reforestation Corridor</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-6,850 t CO₂e/yr</span>
+            <h3>Reforestation Corridor</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(2)">
+          <img
+            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=80"
+            alt="Low-Carbon EV Highway Grid"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%231e293b%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23e2e8f0%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>EV Transit Corridor</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-3,910 t CO₂e/yr</span>
+            <h3>EV Transit Corridor</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(3)">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80"
+            alt="Utility Solar Microgrid"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%230369a1%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23e0f2fe%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Solar Microgrid</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-8,400 t CO₂e/yr</span>
+            <h3>Solar Microgrid</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(4)">
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+            alt="Alpine Watershed Protection"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%23334155%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23f1f5f9%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Alpine Watershed</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-5,120 t CO₂e/yr</span>
+            <h3>Alpine Watershed</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(5)">
+          <img
+            src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=700&q=80"
+            alt="Offshore Wind & Tidal Array"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%23115e59%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23ccfbf1%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Offshore Wind Array</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-9,300 t CO₂e/yr</span>
+            <h3>Offshore Wind Array</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(6)">
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80"
+            alt="Peatland & Wetland Restoration"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%23166534%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23dcfce7%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Wetland Carbon Sink</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-7,150 t CO₂e/yr</span>
+            <h3>Wetland Carbon Sink</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="cc-tile" onclick="inspectProject(7)">
+          <img
+            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=700&q=80"
+            alt="Hydroelectric Basin Telemetry"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22400%22 height=%22300%22 fill=%22%231d4ed8%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23dbeafe%22 font-family=%22sans-serif%22 font-size=%2216%22 text-anchor=%22middle%22>Clean Hydro Basin</text></svg>'"
+          />
+          <figcaption>
+            <span class="cc-tag">-6,040 t CO₂e/yr</span>
+            <h3>Clean Hydro Basin</h3>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Interactive Project Detail Banner (Updates when clicking any gallery tile) -->
+      <div id="projectSpotlight" class="cc-spotlight">
+        <div>
+          <strong id="spotTitle">Coastal Blue Carbon</strong>
+          <p id="spotDesc">Mangrove restoration and seagrass protection sequestering carbon 4x faster than terrestrial forests.</p>
+        </div>
+        <button type="button" class="cc-btn cc-btn-primary" onclick="addSpotlightToTasks()">
+          + Add Project to Action Checklist
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carbon Footprint Calculator -->
+  <section id="footprint-estimator" class="cc-section cc-alt">
+    <div class="cc-wrap">
+      <div class="cc-sec-title">
+        <h2>Carbon Footprint Tracking Estimator</h2>
+        <p>Calculate monthly and annual emissions across power, transport, and operations.</p>
+      </div>
+
+      <div class="cc-calc-box">
+        <div class="cc-sliders">
+          <div class="cc-ctrl">
+            <label for="elecSlider">Monthly Electricity: <strong id="elecOut">280</strong> kWh</label>
+            <input type="range" id="elecSlider" min="50" max="1500" value="280" oninput="runCarbonCalc()" />
+          </div>
+          <div class="cc-ctrl">
+            <label for="kmSlider">Weekly Vehicle Travel: <strong id="kmOut">130</strong> km</label>
+            <input type="range" id="kmSlider" min="0" max="1000" value="130" oninput="runCarbonCalc()" />
+          </div>
+          <div class="cc-ctrl">
+            <label for="dietMenu">Diet &amp; Supply Profile</label>
+            <select id="dietMenu" onchange="runCarbonCalc()">
+              <option value="115">Plant-Based / Low-Carbon (115 kg CO₂e/mo)</option>
+              <option value="170" selected>Vegetarian Balanced (170 kg CO₂e/mo)</option>
+              <option value="250">Standard Mixed (250 kg CO₂e/mo)</option>
+              <option value="340">High-Intensity Cold Chain (340 kg CO₂e/mo)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cc-readout">
+          <span class="cc-kicker">Monthly Carbon Output</span>
+          <div class="cc-metric"><span id="monthKg">490</span> <small>kg CO₂e</small></div>
+          <p>Annual Footprint: <strong id="yearTonnes">5.88</strong> tonnes CO₂e/yr</p>
+          <span id="calcBadge" class="cc-badge">Moderate — 22% reduction possible via Solar Microgrid</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRUD Action Checklist (Input box, Add button onclick, CRUD array of tasks) -->
+  <section id="crud-checklist" class="cc-section">
+    <div class="cc-wrap">
+      <div class="cc-sec-title">
+        <h2>Carbon Reduction CRUD Action Checklist</h2>
+        <p>Create, read, update, and delete sustainability milestones in a live JavaScript task array.</p>
+      </div>
+
+      <div class="cc-crud-card">
+        <div class="cc-input-group">
+          <input
+            type="text"
+            id="taskInputBox"
+            placeholder="Enter a carbon reduction action (e.g., Audit Scope 2 office electricity)..."
+            aria-label="Carbon reduction task input"
+          />
+          <button type="button" class="cc-btn cc-btn-primary" onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="cc-crud-bar">
+          <span id="taskStats">0 tasks tracked</span>
+          <button type="button" class="cc-text-link" onclick="resetTasks()">Reset Sample Tasks</button>
+        </div>
+
+        <ul id="taskUl" class="cc-task-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimum Underpinning Theory -->
+  <section id="grid-theory" class="cc-section cc-alt">
+    <div class="cc-wrap">
+      <div class="cc-sec-title">
+        <h2>Minimum Underpinning Theory: CSS Grid Responsive Image Gallery</h2>
+        <p>How CSS Grid builds an adaptive gallery structure across desktop and mobile viewports.</p>
+      </div>
+
+      <div class="cc-theory-card">
+        <p>
+          Developing a responsive grid layout for an image gallery revolves around utilizing <strong>CSS Grid</strong>
+          to create a flexible, two-dimensional structure that dynamically adjusts based on viewport size. By defining
+          <code>display: grid</code> with <code>grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))</code> and
+          <code>gap: 16px</code>, CSS Grid controls both rows and columns simultaneously—displaying a 4&times;2 tile
+          matrix on wide desktop screens and automatically rearranging into a 2&times;4 grid on compact mobile devices
+          without rigid media queries.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cc-footer">
+    <div class="cc-wrap cc-footer-row">
+      <span><strong>CARBONCUT</strong> &mdash; Carbon Footprint Tracking &amp; Reduction Services</span>
+      <span>&copy; 2026 CARBONCUT &bull; GitHub &amp; Vercel Ready</span>
+    </div>
+  </footer>
+
+  <script src="carboncut_gallery_crud.js"></script>
+</body>
+</html>
